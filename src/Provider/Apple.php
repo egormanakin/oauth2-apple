@@ -238,7 +238,7 @@ class Apple extends AbstractProvider
     public function getConfiguration()
     {
         return Configuration::forSymmetricSigner(
-            new Signer\Ecdsa\Sha256(new Lcobucci\JWT\Signer\Ecdsa\MultibyteStringConverter()),
+            new Signer\Ecdsa\Sha256(new Signer\Ecdsa\MultibyteStringConverter()),
             $this->getLocalKey()
         );
     }
